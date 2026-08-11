@@ -1,30 +1,23 @@
-from random import randint
+import randint
 import time
-/**
-     * método de classe que popula lista ou com números aleatorios e de forma sequencial dentro de uma faixa
-     * @param lista
-     * @param quantidadeNumeros
-     * @param inicio
-     * @param fim
-     * @param aleatorio - se true os números devem ser aleatórios
-     */
+
 
 class Lista:
-    def __init__(self, lista, quantidadeNumeros, inicio, fim, aleatorio)
-    
-    self.lista = lista
-    self.quantidadeNumeros = quantidadeNumeros
-    self.inicio = inicio
-    self.fim = fim
+    def __init__(self):
+        self.lista_aleatoria = []
+        self.lista_sequencial = []
 
 
+    def popular_lista_aleatoria(self, quantidade: int, inicio: int, fim: int) -> None:
+        """Gera números aleatórios dentro de uma faixa."""
+        self.lista_aleatoria = [random.randint(inicio, fim - 1) for _ in range(quantidade)]
 
-inicio = time.perf_counter()
+    def popular_lista_sequencial(self, quantidade: int, inicio: int) -> None:
+        """Gera números sequenciais crescentes."""
+        self.lista_sequencial = list(range(inicio, quantidade))
 
-# Seu código aqui
+    def get_lista_aleatoria(self) -> list:
+        return self.lista_aleatoria
 
-for i in range(1000000):
-    pass
-
-fim = time.perf_counter()
-print(f"Demorou: {fim - inicio:.4f} segundos")
+    def get_lista_sequencial(self) -> list:
+        return self.lista_sequencial
