@@ -1,0 +1,14 @@
+C:\Users\laboratorio\source\repos\Ordenacao\bin\Debug\net10.0\Ordenacao.exe
+C:\Users\laboratorio\source\repos\Ordenacao\bin\Debug\net10.0\Ordenacao.deps.json
+C:\Users\laboratorio\source\repos\Ordenacao\bin\Debug\net10.0\Ordenacao.runtimeconfig.json
+C:\Users\laboratorio\source\repos\Ordenacao\bin\Debug\net10.0\Ordenacao.dll
+C:\Users\laboratorio\source\repos\Ordenacao\bin\Debug\net10.0\Ordenacao.pdb
+C:\Users\laboratorio\source\repos\Ordenacao\obj\Debug\net10.0\Ordenacao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\laboratorio\source\repos\Ordenacao\obj\Debug\net10.0\Ordenacao.AssemblyInfoInputs.cache
+C:\Users\laboratorio\source\repos\Ordenacao\obj\Debug\net10.0\Ordenacao.AssemblyInfo.cs
+C:\Users\laboratorio\source\repos\Ordenacao\obj\Debug\net10.0\Ordenacao.csproj.CoreCompileInputs.cache
+C:\Users\laboratorio\source\repos\Ordenacao\obj\Debug\net10.0\Ordenacao.dll
+C:\Users\laboratorio\source\repos\Ordenacao\obj\Debug\net10.0\refint\Ordenacao.dll
+C:\Users\laboratorio\source\repos\Ordenacao\obj\Debug\net10.0\Ordenacao.pdb
+C:\Users\laboratorio\source\repos\Ordenacao\obj\Debug\net10.0\Ordenacao.genruntimeconfig.cache
+C:\Users\laboratorio\source\repos\Ordenacao\obj\Debug\net10.0\ref\Ordenacao.dll
