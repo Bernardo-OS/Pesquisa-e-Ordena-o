@@ -3,8 +3,15 @@ package app.model;
 import java.util.List;
 import java.util.Random;
 
+/**
+* classe de objeto ProcessoService, serve para guardar valores para controle intermediário dos processos 
+*/
 public class ProcessoService {
 
+    /**
+    * método para execução da ordenação bolha
+    * @param lista
+    */
     public void ordenarBolha(List<Processo> lista) {
         Processo tmp;
         boolean houveTroca;
@@ -21,6 +28,11 @@ public class ProcessoService {
         } while (houveTroca);
     }
 
+    /**
+    * método para popular lista com valores de texto e número
+    * @param lista
+    * @param quantidade
+    */
     public void popular(List<Processo> lista, int quantidade) {
         Random gerador = new Random();
         

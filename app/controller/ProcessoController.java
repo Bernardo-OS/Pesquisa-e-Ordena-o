@@ -13,12 +13,22 @@ public class ProcessoController {
     private final ProcessoView view;
     private final List<Processo> listaDeProcessos;
 
+    /**
+     * construtor da classe ProcessoController que instancia um objeto de controle para processos
+     * @param service
+     * @param view
+     * @param listaDeProcessos
+     */
     public ProcessoController(ProcessoService service, ProcessoView view) {
         this.service = service;
         this.view = view;
         this.listaDeProcessos = new ArrayList<>();
     }
 
+    /**
+    * método unificado para chamar as funções principais para iniciar o processo, populando as listas, 
+    * executando processo de controle e chamando a view para exibir resultado
+    */
     public void iniciarSistema() {
         // 1. Executa a regra de negócio para gerar dados
         service.popular(listaDeProcessos, 4);

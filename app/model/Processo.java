@@ -1,7 +1,6 @@
 package app.model;
 
-/**
- * 
+/** 
  * classe Processo
  */
 public class Processo implements Comparable<Processo> {
@@ -35,15 +34,16 @@ public class Processo implements Comparable<Processo> {
     }
 
     /**
-     * construtor da classe Processo que instancia um objeto com id e descricao
-     * @param id
-     * @param descricao
+     * sobreescrita do método toString. Formata a saída em texto do objeto Processo.
      */
     @Override
     public String toString() {
         return "Processo [id=" + id + ", descricao=" + descricao + "]";
     }
 
+    /**
+     * sobreescrita do método hashCode. Formata o código criado para idendtificação de objeto.
+     */
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -52,6 +52,9 @@ public class Processo implements Comparable<Processo> {
         return result;
     }
 
+    /**
+     * sobreescrita do método equals. Acrescenta atributos para comparação entre objetos.
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -66,6 +69,10 @@ public class Processo implements Comparable<Processo> {
         return true;
     }
 
+    /**
+     * sobreescrita do método compareTo. 
+     * Reescrição faz controle de exceção caso objeto outro (que será comparado com atual this), for nulo.
+     */
     @Override
     public int compareTo(Processo outro) {
         if (outro == null) {
