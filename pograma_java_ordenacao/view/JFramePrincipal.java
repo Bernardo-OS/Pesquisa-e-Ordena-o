@@ -9,6 +9,7 @@ import controller.Ordenacao;
 import controller.Util;
 
 import java.util.ArrayList;
+import java.io.IOException;
 import javax.swing.JOptionPane;
 
 /**
@@ -230,10 +231,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
         if (jTextFieldNomeArquivo.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Informe nome do arquivo", "Atenção", JOptionPane.ERROR_MESSAGE);
         } else {
-            if (Util.carregarArquivoEmLista(jTextFieldNomeArquivo.getText(), Model.lista)) {
+            try {
+                Util.carregarArquivoEmLista(jTextFieldNomeArquivo.getText(), Model.lista);
                 JOptionPane.showMessageDialog(this, "Lista carregada com sucesso", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
-            } else {
-                JOptionPane.showMessageDialog(this, "Problemas para ler o arquivo e carregar a lista", "Erro", JOptionPane.ERROR_MESSAGE);
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(this, e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
                 jTextFieldNomeArquivo.setText("");
                 jTextFieldNomeArquivo.requestFocusInWindow();
             }
