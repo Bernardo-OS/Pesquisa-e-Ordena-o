@@ -234,7 +234,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
             try {
                 Util.carregarArquivoEmLista(jTextFieldNomeArquivo.getText(), Model.lista);
                 JOptionPane.showMessageDialog(this, "Lista carregada com sucesso", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
-            } catch (IOException e) {
+            } catch (IOException e) { //no recurso java de controle de exceção, captura exceção de IO e NumberFormatException para separar do controller
                 JOptionPane.showMessageDialog(this, e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
                 jTextFieldNomeArquivo.setText("");
                 jTextFieldNomeArquivo.requestFocusInWindow();
