@@ -6,9 +6,8 @@ package model;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author laboratorio
+ /**
+ * Modelo base de lista seguindo padrão mvc
  */
 public class Model {
     
