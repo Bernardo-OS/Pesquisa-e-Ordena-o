@@ -2,8 +2,17 @@ package controller;
 
 import java.util.ArrayList;
 
+/**
+* Classe principal que roda todos os métodos de ordenação do sistema
+*/
 public class Ordenacao {
 
+    /**
+     * Método de ordenação bolha
+     * 
+     * @param lista Lista com valores a serem ordenados
+     * @return metricas
+     */
     public static ArrayList bolha(ArrayList<Integer> lista) {
         ArrayList<Float> metricas = new ArrayList<>();
         long qtdComparacoes = 0;
@@ -29,6 +38,12 @@ public class Ordenacao {
         return metricas;
     }
 
+    /**
+     * Método de ordenação seleção
+     * 
+     * @param lista Lista com valores a serem ordenados
+     * @return metricas
+     */
     public static ArrayList selecao(ArrayList<Integer> lista) {
         ArrayList<Float> metricas = new ArrayList<>();
         long qtdComparacoes = 0;
@@ -57,6 +72,12 @@ public class Ordenacao {
         return metricas;
     }
 
+    /**
+     * Método de ordenação inserção
+     * 
+     * @param lista Lista com valores a serem ordenados
+     * @return metricas
+     */
     public static ArrayList insercao(ArrayList<Integer> lista) {
         ArrayList<Float> metricas = new ArrayList<>();
         long qtdComparacoes = 0;
@@ -76,6 +97,12 @@ public class Ordenacao {
         return metricas;
     }
 
+    /**
+     * Método de ordenação pente
+     * 
+     * @param lista Lista com valores a serem ordenados
+     * @return metricas
+     */
     public static ArrayList pente(ArrayList<Integer> lista) {
         ArrayList<Float> metricas = new ArrayList<>();
         long qtdComparacoes = 0;
@@ -108,7 +135,12 @@ public class Ordenacao {
     
     
     //Para ordenação merge:
-    // Método principal Merge
+    /**
+     * Função principal método de ordenação merge
+     * 
+     * @param lista Lista com valores a serem ordenados
+     * @return metricas
+     */
     public static ArrayList<Float> merge(ArrayList<Integer> lista) {
         ArrayList<Float> metricas = new ArrayList<>();
         
@@ -124,7 +156,14 @@ public class Ordenacao {
         return metricas;
     }
 
-    // Função auxiliar para dividir a lista recursivamente
+    /**
+     * Função auxiliar para dividir a lista recursivamente para merge
+     * 
+     * @param lista Lista com valores a serem ordenados
+     * @param inicio da lista
+     * @param fim da lista
+     * @param contadores guarda valor de métrica
+     */
     private static void mergeSortRecursivo(ArrayList<Integer> lista, int inicio, int fim, long[] contadores) {
         if (inicio < fim) {
             int meio = inicio + (fim - inicio) / 2;
@@ -138,7 +177,14 @@ public class Ordenacao {
         }
     }
 
-    // Função auxiliar para juntar as partes e contabilizar as métricas
+    /**
+     * Função auxiliar para juntar as partes e contabilizar as métricas
+     * 
+     * @param lista Lista com valores a serem ordenados
+     * @param inicio da lista
+     * @param fim da lista
+     * @param contadores guarda valor de métrica
+     */
     private static void intercalar(ArrayList<Integer> lista, int inicio, int meio, int fim, long[] contadores) {
         // Cria listas temporárias para armazenar as metades
         ArrayList<Integer> esquerda = new ArrayList<>();
@@ -187,7 +233,12 @@ public class Ordenacao {
     }
     
     //Para ordenação quick:
-     // Método principal que será chamado no seu Switch-Case
+    /**
+     * Função principal método de ordenação quick
+     * 
+     * @param lista Lista com valores a serem ordenados
+     * @return metricas 
+     */
     public static ArrayList<Float> quick(ArrayList<Integer> lista) {
         ArrayList<Float> metricas = new ArrayList<>();
         
@@ -203,7 +254,14 @@ public class Ordenacao {
         return metricas;
     }
 
-    // Função auxiliar para controlar as partições recursivamente
+    /**
+     * Função auxiliar para controlar as partições recursivamente para quick
+     * 
+     * @param lista Lista com valores a serem ordenados
+     * @param inicio da lista
+     * @param fim da lista
+     * @param contadores guarda valor de métrica
+     */
     private static void quicksortRecursivo(ArrayList<Integer> lista, int inicio, int fim, long[] contadores) {
         if (inicio < fim) {
             // Encontra o índice do pivô posicionado corretamente
@@ -215,7 +273,7 @@ public class Ordenacao {
         }
     }
 
-    // Função que escolhe o pivô e reorganiza os elementos na lista
+    // Função que escolhe o pivô e reorganiza os elementos na lista para quick
     private static int particionar(ArrayList<Integer> lista, int inicio, int fim, long[] contadores) {
         // Escolhe o último elemento como pivô
         int pivo = lista.get(fim);
